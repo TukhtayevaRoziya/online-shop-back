@@ -1,0 +1,22 @@
+{
+  "name": "online-shopback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.21",
+    "path": "^0.12.7"
+  }
+}
