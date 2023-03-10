@@ -42,14 +42,14 @@ router.post("/login", async (req, res) => {
 
 // const jwt = require("jsonwebtoken");
 
-router.get("/api", (req, res) => {
+router.get("/", (req, res) => {
   // res.send(students);
   Item.find().then((result) => {
     res.send(result);
   });
 });
 
-router.put("api/update", async (req, res) => {
+router.put("/", async (req, res) => {
   const newAdminData = new Item({
     title: req.body.title,
     price: req.body.price,
@@ -79,7 +79,7 @@ router.put("api/update", async (req, res) => {
   //   res.json(result);
   // });
 });
-router.delete("api/delete/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   await Item.findByIdAndDelete(req.params.id);
 
   Item.find().then((result) => {
@@ -125,7 +125,7 @@ router.delete("api/delete/:id", async (req, res) => {
 //   }
 // );
 
-router.post("api/add", (req, res) => {
+router.post("/", (req, res) => {
   const newItemData = new Item(req.body);
   const savedItemData = newItemData.save();
   savedItemData.then(function (result) {
