@@ -4,7 +4,7 @@ const app = express()
 const cors = require("cors"); 
 app.use(cors()); 
 
-mongoose.set('strictQuery', false);
+// mongoose.set('strictQuery', false);
 
 mongoose.connect("mongodb+srv://roziya:onlineShop@cluster0.xkwrwwv.mongodb.net/online-shop", {
   useNewUrlParser: true,
@@ -20,7 +20,7 @@ db.once("open", () => {
 // app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use('/', require('./routes/auth'))
-app.use('/api', require('./routes/home'))
+// app.use('/api', require('./routes/home'))
 // app.use("/images", express.static("/"));
 
 app.listen(3001, ()=>console.log('Server has been started'))
