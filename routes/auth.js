@@ -42,7 +42,7 @@ router.post("/login", async (req, res) => {
 
 // const jwt = require("jsonwebtoken");
 
-router.get("/", (req, res) => {
+router.get("/api", (req, res) => {
   // res.send(students);
   Item.find().then((result) => {
     res.send(result);
