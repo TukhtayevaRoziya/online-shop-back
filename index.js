@@ -20,7 +20,7 @@ db.once("open", () => {
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use('/', require('./routes/auth'))
-// app.use('/api', require('./routes/home'))
+app.use('/api', require('./routes/home'))
 app.use("/images", express.static("images"));
 
 app.listen(3001, ()=>console.log('Server has been started'))

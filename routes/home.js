@@ -1,8 +1,12 @@
 const { Router } = require("express");
 const Item = require("../models/item");
 const multer = require("multer");
+const express = require("express");
 const path = require("path");
+var upload = multer({ dest: "upload/" });
+var fs = require("fs");
 // const jwt = require("jsonwebtoken");
+var type = upload.single("recfile");
 
 const router = Router();
 
