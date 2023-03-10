@@ -11,6 +11,10 @@ async function findEmail(email) {
   return adminEmail[0];
 }
 
+router.get('/', (req,res)=>{
+  res.send('Hello') 
+})
+
 // Login Route
 router.post("/login", async (req, res) => {
   const myAdmin = await findEmail(req.body.email);
