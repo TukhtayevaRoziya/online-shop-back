@@ -3,7 +3,6 @@ const admin = require("../config/admin");
 const Admin = require("../models/admin");
 const jwt = require("jsonwebtoken");
 var validator = require("email-validator");
-const { Router } = require("express");
 const Item = require("../models/item");
 const multer = require("multer");
 const path = require("path");
